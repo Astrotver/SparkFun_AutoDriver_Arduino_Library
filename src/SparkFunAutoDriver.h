@@ -1,9 +1,10 @@
 #ifndef AutoDriver_h
 #define AutoDriver_h
 
-#include "Arduino.h"
+//#include "Arduino.h"
 #include <SPI.h>
-#include "SparkFundSPINConstants.h"
+#include "dSPINConstants.h"
+
 
 class AutoDriver
 {
@@ -19,6 +20,7 @@ class AutoDriver
     // These are super-common things to do: checking if the device is busy,
     //  and checking the status of the device. We make a couple of functions
     //  for that.
+    int swCheck();
     int busyCheck();
     int getStatus();
     
@@ -49,6 +51,10 @@ class AutoDriver
     void setDecKVAL(byte kvalInput);
     void setRunKVAL(byte kvalInput);
     void setHoldKVAL(byte kvalInput);
+    void setStSLP(byte kvalInput);
+    void setFnSLPAcc(byte kvalInput);
+    void setFnSLPDec(byte kvalInput);
+
 
     boolean getLoSpdOpt();
     // getSyncPin
@@ -70,6 +76,9 @@ class AutoDriver
     byte getDecKVAL();
     byte getRunKVAL();
     byte getHoldKVAL();
+    byte getStSLP();
+    byte getFnSLPAcc();
+    byte getFnSLPDec();
     
     // ...and now, operational commands.
     long getPos();

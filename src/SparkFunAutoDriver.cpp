@@ -1,5 +1,5 @@
 #include <SPI.h>
-#include "SparkFunAutoDriver.h"
+#include "AutoDriver.h"
 
 int AutoDriver::_numBoards;
 
@@ -27,6 +27,12 @@ AutoDriver::AutoDriver(int position, int CSPin, int resetPin)
 void AutoDriver::SPIPortConnect(SPIClass *SPIPort)
 {
   _SPI = SPIPort;
+}
+
+int AutoDriver::swCheck(void)
+{
+    if (getParam(STATUS) & 0x0004) return 0;
+    else                           return 1;
 }
 
 int AutoDriver::busyCheck(void)

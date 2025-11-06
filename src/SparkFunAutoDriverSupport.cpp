@@ -1,4 +1,4 @@
-#include "SparkFunAutoDriver.h"
+#include "AutoDriver.h"
 #include <SPI.h>
 
 // AutoDriverSupport.cpp - Contains utility functions for converting real-world 

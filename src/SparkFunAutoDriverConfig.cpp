@@ -1,4 +1,4 @@
-#include "SparkFunAutoDriver.h"
+#include "AutoDriver.h"
 
 // Setup the SYNC/BUSY pin to be either SYNC or BUSY, and to a desired
 //  ticks per step level.
@@ -292,6 +292,38 @@ byte AutoDriver::getHoldKVAL()
   return (byte) getParam(KVAL_HOLD);
 }
 
+//------------------------------------------------------------------------------------------
+void AutoDriver::setStSLP(byte kvalInput)
+{
+  setParam(ST_SLP, kvalInput);
+}
+
+byte AutoDriver::getStSLP()
+{
+  return (byte) getParam(ST_SLP);
+}
+
+void AutoDriver::setFnSLPAcc(byte kvalInput)
+{
+  setParam(FN_SLP_ACC, kvalInput);
+}
+
+byte AutoDriver::getFnSLPAcc()
+{
+  return (byte) getParam(FN_SLP_ACC);
+}
+
+
+void AutoDriver::setFnSLPDec(byte kvalInput)
+{
+  setParam(FN_SLP_DEC, kvalInput);
+}
+
+byte AutoDriver::getFnSLPDec()
+{
+  return (byte) getParam(FN_SLP_DEC);
+}
+//-----------------------------------------------------------------------------------------
 // Enable or disable the low-speed optimization option. With LSPD_OPT enabled,
 //  motion starts from 0 instead of MIN_SPEED and low-speed optimization keeps
 //  the driving sine wave prettier than normal until MIN_SPEED is reached.
