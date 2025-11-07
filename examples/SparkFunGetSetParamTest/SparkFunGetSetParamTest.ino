@@ -1,4 +1,4 @@
-#include <SparkFunAutoDriver.h>
+#include <AutoDriver.h>
 #include <SPI.h>
 
 /* Test sketch that just gets and sets values on a L6470 AutoDriver
@@ -276,6 +276,7 @@ void test(bool v1, bool v2)
     Serial.println(name + " passed r/w test!");
   }
 }
+
 
 
 
