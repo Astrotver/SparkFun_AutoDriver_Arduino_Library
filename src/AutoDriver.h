@@ -1,7 +1,7 @@
 #ifndef AutoDriver_h
 #define AutoDriver_h
 
-//#include "Arduino.h"
+#include "Arduino.h"
 #include <SPI.h>
 #include "dSPINConstants.h"
 
