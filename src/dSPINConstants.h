@@ -187,7 +187,7 @@
 #define STATUS               0x19
 
 //dSPIN commands
-#define NOP                  0x00
+//#define NOP                  0x00
 #define SET_PARAM            0x00
 #define GET_PARAM            0x20
 #define RUN                  0x50
